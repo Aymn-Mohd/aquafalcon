@@ -1,7 +1,7 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { Contact, Goal, Market, Problem, Systems, Traction } from "@/components/Sections";
+import { Contact, Cost, Goal, Market, Problem, Systems, Traction, WorldView } from "@/components/Sections";
 
 export default function Home() {
   return (
@@ -16,6 +16,8 @@ export default function Home() {
       <main id="main" tabIndex={-1} className="outline-none">
         <Hero />
         <Problem />
+        <WorldView />
+        <Cost />
         <Goal />
         <Systems />
         <Traction />

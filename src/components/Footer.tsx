@@ -29,8 +29,8 @@ export function Footer() {
               {f.sources.map((s, i) => (
                 <li key={s.href} className="grid grid-cols-[1.5rem_minmax(0,1fr)]">
                   <span className="text-steel">{i + 1}</span>
-                  <ExternalLink href={s.href} className="ulink break-all text-fog">
-                    {s.href.replace(/^https?:\/\/(www\.)?/, "")}
+                  <ExternalLink href={s.href} className="ulink break-words text-fog">
+                    {s.label}
                   </ExternalLink>
                 </li>
               ))}

@@ -1,4 +1,4 @@
-import { site } from "@/config/site";
+import { site, sourceNumber, type Source } from "@/config/site";
 import type { ComponentProps, ReactNode } from "react";
 
 /** External link: always new tab, never leaks the opener or referrer. */
@@ -63,13 +63,25 @@ export function Label({
   );
 }
 
-/** Superscript numbered source link. */
-export function SourceRef({ n, href, label }: { n: number; href: string; label: string }) {
+/** Superscript numbered source links; numbers come from the shared source list. */
+export function SourceRefs({ sources }: { sources: readonly Source[] }) {
   return (
     <sup className="leading-none">
-      <a href={href} target="_blank" rel="noopener noreferrer" className="src ulink" aria-label={`Source ${n}: ${label} (opens in a new tab)`}>
-        {n}
-      </a>
+      {sources.map((src) => {
+        const n = sourceNumber(src);
+        return (
+          <a
+            key={src.href}
+            href={src.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="src ulink"
+            aria-label={`Source ${n}: ${src.label} (opens in a new tab)`}
+          >
+            {n}
+          </a>
+        );
+      })}
     </sup>
   );
 }

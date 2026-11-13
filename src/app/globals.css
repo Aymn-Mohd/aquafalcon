@@ -29,7 +29,7 @@
   main {
     scroll-margin-top: 7rem;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 1280px) {
     section[id],
     [id="vessel"] {
       scroll-margin-top: 4.5rem;

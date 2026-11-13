@@ -8,7 +8,7 @@ export function Hero() {
     <section
       id="top"
       aria-labelledby="hero-title"
-      className="relative isolate flex min-h-[calc(100svh-6.25rem)] flex-col justify-end overflow-hidden bg-ink text-paper lg:min-h-[calc(100svh-4rem)]"
+      className="relative isolate flex min-h-[calc(100svh-6.25rem)] flex-col justify-end overflow-hidden bg-ink text-paper xl:min-h-[calc(100svh-4rem)]"
     >
       <HeroField />
       <div className="shell relative pt-24 pb-14 md:pb-20">

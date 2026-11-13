@@ -9,11 +9,11 @@ export function Header() {
           <Wordmark />
         </a>
 
-        <nav aria-label="Primary" className="hidden lg:block">
+        <nav aria-label="Primary" className="hidden xl:block">
           <ul className="flex items-center gap-8">
             {site.nav.map((item) => (
               <li key={item.href}>
-                <a href={item.href} className="label text-fog transition-colors hover:text-paper">
+                <a href={item.href} className="label whitespace-nowrap text-fog transition-colors hover:text-paper">
                   {item.label}
                 </a>
               </li>
@@ -31,7 +31,7 @@ export function Header() {
       </div>
 
       {/* Compact anchor row for small screens; scrolls inside itself, never the page. */}
-      <nav aria-label="Sections" className="border-t border-graphite lg:hidden">
+      <nav aria-label="Sections" className="border-t border-graphite xl:hidden">
         <ul className="shell no-scrollbar flex h-11 items-center gap-6 overflow-x-auto">
           {site.nav.map((item) => (
             <li key={item.href} className="shrink-0">

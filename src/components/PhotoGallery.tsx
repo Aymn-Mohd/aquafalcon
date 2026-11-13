@@ -35,7 +35,9 @@ function Caption({ i, text }: { i: number; text: string }) {
 export function PhotoGallery() {
   const [lead, side, ...rest] = site.photos;
   return (
-    <div id="vessel" className="grid-12 mt-16 gap-y-8 md:mt-24 md:gap-y-10">
+    <div id="vessel" className="mt-16 md:mt-24">
+      <h3 className="label text-graphite">{site.photosLabel}</h3>
+      <div className="grid-12 mt-6 gap-y-8 md:gap-y-10">
       <figure data-reveal className="col-span-4 md:col-span-8">
         <Photo photo={lead} sizes="(min-width: 768px) 66vw, 100vw" frame="aspect-[4/3]" />
         <Caption i={0} text={lead.caption} />
@@ -50,6 +52,7 @@ export function PhotoGallery() {
           <Caption i={k + 2} text={p.caption} />
         </figure>
       ))}
+      </div>
     </div>
   );
 }
