@@ -3,6 +3,7 @@ import { CatamaranPlan } from "./art/CatamaranPlan";
 import { HeadingRing } from "./art/HeadingRing";
 import { WaypointTrack } from "./art/WaypointTrack";
 import { Arrow, ExternalLink, Label, SourceRef } from "./ui";
+import { PhotoGallery } from "./PhotoGallery";
 import { VideoFacade } from "./VideoFacade";
 
 const delay = (i: number) => ({ ["--d" as string]: `${i * 90}ms` });
@@ -83,7 +84,7 @@ export function Systems() {
         </div>
 
         <div className="grid-12 mt-16 gap-y-12 md:mt-24">
-          <figure id="vessel" data-reveal className="col-span-4 border border-fog md:col-span-5">
+          <figure data-reveal className="col-span-4 border border-fog md:col-span-5">
             <CatamaranPlan className="mx-auto block h-auto w-full max-w-[30rem] text-ink" />
           </figure>
 
@@ -99,6 +100,8 @@ export function Systems() {
             ))}
           </ul>
         </div>
+
+        <PhotoGallery />
       </div>
     </section>
   );

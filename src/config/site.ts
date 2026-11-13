@@ -130,6 +130,45 @@ export const site = {
     ],
   },
 
+  // Prototype photos. Files live in public/photos as <name>-640.webp and <name>-1280.webp.
+  photos: [
+    {
+      name: "bow-three-quarter",
+      width: 1280,
+      height: 960,
+      caption: "Prototype",
+      alt: "AquaFalcon prototype on a table: yellow twin hulls, aluminium deck plates, two blue pumps at the bow and a camera mast with ultrasonic sensors.",
+    },
+    {
+      name: "pool-wide",
+      width: 1280,
+      height: 1707,
+      caption: "Pool test",
+      alt: "AquaFalcon prototype floating in a test pool, seen from above.",
+    },
+    {
+      name: "pool-top",
+      width: 1280,
+      height: 1344,
+      caption: "On the water",
+      alt: "Top-down view of AquaFalcon on the water, showing the Raspberry Pi, M9N GPS module, small display and camera mast.",
+    },
+    {
+      name: "pump-side",
+      width: 1280,
+      height: 960,
+      caption: "Collection bay",
+      alt: "Side view of the aluminium collection bay with a bottle and tubing inside, below the camera mast and ultrasonic sensors.",
+    },
+    {
+      name: "thruster-top",
+      width: 1280,
+      height: 1707,
+      caption: "Bow detail",
+      alt: "Close-up from above of an aluminium bow guard and blue pump mounted on the yellow hull.",
+    },
+  ] as { name: string; width: number; height: number; caption: string; alt: string }[],
+
   traction: {
     label: "04 / TRACTION",
     stats: [
